@@ -12,11 +12,12 @@ const viewProfile = () => {
       </div> */}
       <div className='p-4'>
         <div className='w-full m-auto p-4 border rounded-lg bg-white overflow-y-auto'>
-          <div className='my-3 p-2 grid md:grid-cols-4 sm:grid-cols-3 grid-cols-2 items-center justify-between cursor-pointer'>
-            <span>Order</span>
-            <span className='sm:text-left text-right'>Status</span>
-            <span className='hidden md:grid'>Last Order</span>
-            <span className='hidden sm:grid'>Method</span>
+          <div className='my-3 p-2 grid md:grid-cols-5 sm:grid-cols-3 grid-cols-2 items-center justify-between cursor-pointer'>
+            <span>Logo</span>
+            <span className='sm:text-left text-right'>Nombre Empresa</span>
+            <span className='hidden md:grid'>Tipo de Industria</span>
+            <span className='hidden sm:grid'>Pais</span>
+            <span className='hidden sm:grid'>Empleados</span>
           </div>
           <ul>
             {data.map((order, id) => (
