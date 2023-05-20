@@ -2,7 +2,7 @@ import React from 'react'
 
 const urlApi = () => {
   return (
-    <div className='p-3 grid md:grid-cols-1 grid-cols-1 gap-2 bg-gray-100'>
+    <div className='p-3 grid md:grid-cols-1 grid-cols-1 gap-2 bg-gray-100 '>
 
       <div className='text-center w-full md:col-span-1 relative lg:h-full h-[50vh] m-auto p-4 border rounded-lg bg-white'>
         <h1 className='font-bold text-3xl mb-4'>Consumo de API Rest: InfoJobs</h1>
@@ -14,7 +14,7 @@ const urlApi = () => {
 
 
 
-      <div className="w-full md:col-span-1 flex relative lg:h-[70vh] h-[50vh] m-auto p-4 border rounded-lg bg-white">
+      <div className="w-full md:col-span-1 flex relative lg:h-[70vh] h-[50vh] m-auto p-2  rounded-lg bg-white border-2 border-black">
         <div className="w-[20%] mt-1 text-center overflow-y-auto">
           <ul>
             <li className="bg-gray-50 hover:bg-gray-100 rounded-lg my-1 p-1 cursor-pointer border border-gray-400">
@@ -50,10 +50,10 @@ const urlApi = () => {
           </ul>
         </div>
 
-        <div className='w-full h-full mt-1 ml-2 md:col-span-1 relative m-auto border border-gray-300 rounded-lg bg-white overflow-y-auto'>
+        <div className='w-full h-full mt-1 ml-2 md:col-span-1 relative m-auto  rounded-lg bg-white overflow-y-auto '>
 
           <section id='trabajoProvincia' className='border border-gray-500 p-2 m-5 text-center rounded-lg'>
-            <h1 className='font-bold text-2xl mb-4'>Trabajo por Provincia</h1>
+            <h1 className='underline underline-offset-4 font-bold text-2xl mb-4'>Trabajo por Provincia</h1>
             <div className='flex items-center mb-4'>
               <div className='w-full'>
                 <div className='flex items-center mb-3'>
@@ -104,7 +104,7 @@ const urlApi = () => {
           </section>
 
           <section id='trabajoCiudades' className='border border-gray-500 p-2 m-5 text-center rounded-lg'>
-            <h1 className='font-bold text-2xl mb-4'>Trabajo Ciudades</h1>
+            <h1 className='underline underline-offset-4 font-bold text-2xl mb-4'>Trabajo Ciudades</h1>
             <div className='flex items-center mb-4'>
               <div className='w-full'>
                 <div className='flex items-center mb-3'>
@@ -155,7 +155,7 @@ const urlApi = () => {
           </section>
 
           <section id='teletrabajo' className='border border-gray-500 p-2 m-5 text-center rounded-lg'>
-            <h1 className='font-bold text-2xl mb-4'>Teletrabajo</h1>
+            <h1 className='underline underline-offset-4 font-bold text-2xl mb-4'>Teletrabajo</h1>
             <div className='flex items-center mb-4'>
               <div className='w-full'>
                 <div className='flex items-center mb-3'>
@@ -565,6 +565,9 @@ const urlApi = () => {
 
         </div>
       </div>
+      <div className='flex items-center  justify-center mt-2'>
+          <img className='w-[80%] h-[90px] ' src="https://tpc.googlesyndication.com/simgad/9279042036256268657" alt="" />
+        </div>
     </div>
   )
 }
