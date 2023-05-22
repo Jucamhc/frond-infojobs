@@ -96,7 +96,7 @@ export const dataApplication = [
         qualification: 5,
         opinions: 'Muchas',
         porcent: 100,
-        process: 6,
+        process: 4,
         calcel: 0
     },
 

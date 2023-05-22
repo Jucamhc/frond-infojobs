@@ -4,7 +4,7 @@ const urlApi = () => {
   return (
     <div className='p-3 grid md:grid-cols-1 grid-cols-1 gap-2 bg-gray-100 '>
 
-      <div className='text-center w-full md:col-span-1 relative lg:h-full h-[50vh] m-auto p-4 border rounded-lg bg-white'>
+      <div className='text-center w-full md:col-span-1  lg:h-full h-[50vh] m-auto p-4 border rounded-lg bg-white'>
         <h1 className='font-bold text-3xl mb-4'>Consumo de API Rest: InfoJobs</h1>
         <p className='text-sm text-gray-800'>
         Descubre una forma rápida y sencilla de acceder a la información de ofertas laborales a través de una API REST. 😊 Simplemente selecciona la categoría que deseas consultar en el segmento correspondiente. Todas las consultas son del tipo GET. Una vez que hayas seleccionado la opción deseada, haz clic en 'Buscar' 🔍 para obtener los resultados de la consulta y explorar la información disponible. 🌟
@@ -14,7 +14,7 @@ const urlApi = () => {
 
 
 
-      <div className="w-full md:col-span-1 flex relative lg:h-[70vh] h-[50vh] m-auto p-2  rounded-lg bg-white border-2 border-black">
+      <div className="w-full md:col-span-1 flex  lg:h-[70vh] h-[50vh] m-auto p-2  rounded-lg bg-white border-2 border-black">
         <div className="w-[20%] mt-1 text-center overflow-y-auto">
           <ul>
             <li className="bg-gray-50 hover:bg-gray-100 rounded-lg my-1 p-1 cursor-pointer border border-gray-400">
@@ -50,7 +50,7 @@ const urlApi = () => {
           </ul>
         </div>
 
-        <div className='w-full h-full mt-1 ml-2 md:col-span-1 relative m-auto  rounded-lg bg-white overflow-y-auto '>
+        <div className='w-full h-full mt-1 ml-2 md:col-span-1  m-auto  rounded-lg bg-white overflow-y-auto '>
 
           <section id='trabajoProvincia' className='border border-gray-500 p-2 m-5 text-center rounded-lg'>
             <h1 className='underline underline-offset-4 font-bold text-2xl mb-4'>Trabajo por Provincia</h1>

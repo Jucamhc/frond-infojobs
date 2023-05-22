@@ -16,7 +16,7 @@ const application = () => {
             <span className=''>Empresa</span>
             <span className=''>Países</span>
             <span className='hidden md:grid'>Postulados</span>
-            <span className='hidden sm:grid'>Compatibilidad</span>
+            <span className='hidden sm:grid'>Adaptabilidad</span>
             <span className='hidden sm:grid'>Proceso</span>
           </div>
           <ul>
@@ -53,7 +53,7 @@ const application = () => {
                 </div>
 
                 <div className='flex items-center justify-center'>
-                  <div className='w-11 h-11'>
+                  <div className='w-10 h-10'>
                     <svg className='transform -rotate-0' viewBox='0 0 100 100'>
                       <circle className='text-gray-300 stroke-current' cx='50' cy='50' r='46' strokeWidth='8' fill='none' />
                       <circle className='text-blue-500 stroke-current stroke-dashoffset-transition' cx='50' cy='50' r='46' strokeWidth='8' fill='none' style={{ strokeDasharray: '289.027px', strokeDashoffset: `${(100 - order.porcent) / 100 * 289.027}px` }} />
@@ -62,13 +62,14 @@ const application = () => {
                       </text>
                     </svg>
                   </div>
+                     
                 </div>
 
                 <div className='text-center items-center'>
                   <div className='flex items-center justify-center'>
                     {order.calcel === 1 ? (
                       <div className={`flex flex-col items-center ${order.process >= 1 ? 'text-green-500' : 'text-gray-300'}`}>
-                        <div className={`flex items-center justify-center bg-gray-200 rounded-full w-8 h-8 ${order.process >= 1 ? 'bg-red-500' : ''}`}>
+                        <div className={`flex items-center justify-center bg-gray-200 rounded-full w-6 h-6 ${order.process >= 1 ? 'bg-red-500' : ''}`}>
                           {order.calcel === 1 ? <FcDisapprove className='text-red-500 text-3xl' /> : null}
                         </div>
 {/*                         <p className='text-xs text-gray-500 mt-1 font-bold'>No Aplica</p>
@@ -76,7 +77,7 @@ const application = () => {
                       </div>
                     ) : order.calcel === 2 ? (
                       <div className={`flex flex-col items-center ${order.process >= 1 ? 'text-green-500' : 'text-gray-300'}`}>
-                        <div className={`flex items-center justify-center bg-gray-200 rounded-full w-8 h-8 ${order.process >= 1 ? 'bg-white' : ''}`}>
+                        <div className={`flex items-center justify-center bg-gray-200 rounded-full w-6 h-6 ${order.process >= 1 ? 'bg-white' : ''}`}>
                           {order.calcel === 2 ? <FcButtingIn className=' text-3xl' /> : null}
                         </div>
                         {/* <p className='text-xs text-gray-500 mt-1 font-bold'>Aplica a</p> */}
@@ -85,28 +86,28 @@ const application = () => {
                     ) : (
                       <>
                         <div className={`flex flex-col items-center ${order.process >= 1 ? 'text-green-500' : 'text-gray-300'}`}>
-                          <div className={`flex items-center justify-center bg-gray-200 rounded-full w-8 h-8 ${order.process >= 1 ? 'bg-gray-50' : ''}`}>
+                          <div className={`flex items-center justify-center bg-gray-200 rounded-full w-6 h-6 ${order.process >= 1 ? 'bg-gray-50' : ''}`}>
                             {order.process >= 1 ? <FcApproval className='text-3xl' /> : null}
                           </div>
                           <p className='text-xs text-gray-500 mt-1'>Aplicada</p>
                         </div>
                         <div className='flex-1 border-t-2 border-gray-300'></div>
                         <div className={`flex flex-col items-center ${order.process >= 2 ? 'text-green-500' : 'text-gray-300'}`}>
-                          <div className={`flex items-center justify-center bg-gray-200 rounded-full w-8 h-8 ${order.process >= 2 ? 'bg-gray-50' : ''}`}>
+                          <div className={`flex items-center justify-center bg-gray-200 rounded-full w-6 h-6 ${order.process >= 2 ? 'bg-gray-50' : ''}`}>
                             {order.process >= 2 ? <FcApproval className='text-3xl' /> : null}
                           </div>
                           <p className='text-xs text-gray-500 mt-1'>CV vista</p>
                         </div>
                         <div className='flex-1 border-t-2 border-gray-300'></div>
                         <div className={`flex flex-col items-center ${order.process >= 3 ? 'text-white' : 'text-gray-300'}`}>
-                          <div className={`flex items-center justify-center bg-gray-200 rounded-full w-8 h-8 ${order.process >= 3 ? 'bg-yellow-500 w-6 h-6' : ''}`}>
-                            {order.process >= 3 ? <FcCheckmark className='text-xl' /> : null}
+                          <div className={`flex items-center justify-center bg-gray-200 rounded-full w-6 h-6 ${order.process >= 3 ? 'bg-yellow-500 w-5 h-5' : ''}`}>
+                            {order.process >= 3 ? <FcCheckmark className='text-1xl' /> : null}
                           </div>
                           <p className='text-xs text-gray-500 mt-1'>En proceso</p>
                         </div>
                         <div className='flex-1 border-t-2 border-gray-300'></div>
                         <div className={`flex flex-col items-center ${order.process >= 4 ? 'text-white' : 'text-gray-300'}`}>
-                          <div className={`flex items-center justify-center bg-gray-200 rounded-full w-8 h-8 ${order.process >= 4 ? 'bg-blue-500' : ''}`}>
+                          <div className={`flex items-center justify-center bg-gray-200 rounded-full w-6 h-6 ${order.process >= 4 ? ' font-bold bg-blue-400' : ''}`}>
                             {order.process >= 4 ? <MdOutlineVerified className='text-3xl' /> : null}
                           </div>
                           <p className='text-xs text-gray-500 mt-1'>Finalista</p>

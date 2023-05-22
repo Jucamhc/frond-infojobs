@@ -1,13 +1,75 @@
-import React from 'react'
-import { BsFacebook, BsTwitter, BsYoutube } from 'react-icons/bs';
+import React, { useState, useEffect } from 'react';
 import { Menu, Transition } from '@headlessui/react'
 import { RiNotification3Fill } from 'react-icons/ri';
+import { fetchData, fetchDataJobs } from '../data/fetchData'
+import { useRouter } from 'next/router';
 import Link from 'next/link'
+
 const Headers = () => {
 
   function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
   }
+
+  const [searchValue, setSearchValue] = useState('');
+  const [suggestions, setSuggestions] = useState([]);
+  const router = useRouter();
+
+  const data = async (type) => {
+    if (type.length > 0) {
+      const apiData = await fetchData(type);
+      const newSuggestions = apiData.map((e) => e.value);
+      setSuggestions(newSuggestions);
+    }
+  }
+
+
+
+  const suggestedText = (value) => {
+    console.log(value);
+    setSearchValue(value);
+    setSuggestions([])
+
+    const url = window.location.href;
+    const domain = window.location.origin;
+    const path = url.replace(domain, '');
+    console.log(path);
+
+    if ("/JobOffers" !== path) {
+      console.log("entre");
+      router.push('/JobOffers');
+    }
+
+  }
+
+  const search = async () => {
+    let search = await fetchDataJobs()
+    console.log(search.offers);
+  }
+
+  const renderSuggestions = () => {
+
+    if (searchValue == "") {
+      return null
+    }
+
+    if (suggestions.length === 0 && searchValue !== "") {
+      return null
+    }
+
+    return (
+      <div className="relative mt-2 ">
+        <ul id='items' className="overflow-y-auto h-[150px] absolute left-0 w-full bg-white rounded-md border border-gray-300 divide-y divide-gray-200 cursor-pointer">
+          {suggestions.map((item) => (
+            <li key={item} onClick={() => suggestedText(item)} className="px-4 py-2 hover:bg-gray-100">
+              <button >{item}</button>
+            </li>
+          ))}
+        </ul>
+      </div>
+    )
+  }
+
   return (
 
     <div className='flex bg-gray-100 justify-between px-4 pt-2'>
@@ -15,27 +77,36 @@ const Headers = () => {
         <img className='w-full h-full' src="https://tpc.googlesyndication.com/simgad/9279042036256268657" alt="" />
       </div>
 
-      <li className='flex w-[35%] bg-white rounded-lg my-3 items-center justify-between'>
-        <div className=" ml-2">
-          <label className='text-sm '>Busco ofertas de...</label>
-          <div className=' flex max-w-md gap-x-4'>
+      <li className='flex w-[30%] bg-white rounded-lg my-3 items-center justify-between'>
+        <div className="ml-2 flex-wrap w-[95%]">
+          <label className='text-sm flex-1'>Busco ofertas de...</label>
+
+          <div className='flex w-full max-w-md gap-x-2'>
             <input
-              id="email-address"
-              name="busqueda"
+              autocomplete="off"
+              id="busqueda"
               type="text"
               autoComplete="email"
               required
-              className="min-w-full flex rounded-md  border-2 px-3.5 py-1 shadow-sm ring-1 ring-inset  sm:text-sm sm:leading-6"
+              value={searchValue}
+              className="min-w-0 flex-1 rounded-md border-2 px-3.5 py-1 shadow-sm ring-1 ring-inset sm:text-sm sm:leading-6"
               placeholder="Puesto, empresa o palabra clave"
+              onChange={(event) => {
+                data(event.target.value)
+                setSearchValue(event.target.value);
+              }}
             />
-
             <button
               type="submit"
               className="flex-none rounded-md bg-[#2088c2] px-5 py-1 text-sm font-semibold text-white shadow-sm hover:bg-[#4993bc] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#2088c2]"
+              onClick={() => {
+                search()
+              }}
             >
               Buscar
             </button>
           </div>
+          {renderSuggestions()}
         </div>
       </li>
 
@@ -99,10 +170,8 @@ const Headers = () => {
         </div>
       </li>
 
-
     </div>
   )
 }
 
-
-export default Headers
+export default Headers;
