@@ -5,6 +5,8 @@ import { fetchData, fetchDataJobs } from '../data/fetchData'
 import { useRouter } from 'next/router';
 import Link from 'next/link'
 
+import JobOffers from '@/pages/JobOffers';
+
 const Headers = () => {
 
   function classNames(...classes) {
@@ -23,28 +25,30 @@ const Headers = () => {
     }
   }
 
-
-
   const suggestedText = (value) => {
     console.log(value);
     setSearchValue(value);
     setSuggestions([])
+  }
+
+  const search = async () => {
+    let searchData = await fetchDataJobs()
+
+    const queryParams = new URLSearchParams();
+    queryParams.append('searchData', JSON.stringify(searchData));
+
+    router.push({
+      pathname: '/JobOffers',
+      search: queryParams.toString(),
+    });
 
     const url = window.location.href;
     const domain = window.location.origin;
     const path = url.replace(domain, '');
-    console.log(path);
 
     if ("/JobOffers" !== path) {
-      console.log("entre");
       router.push('/JobOffers');
     }
-
-  }
-
-  const search = async () => {
-    let search = await fetchDataJobs()
-    console.log(search.offers);
   }
 
   const renderSuggestions = () => {
@@ -95,6 +99,7 @@ const Headers = () => {
                 data(event.target.value)
                 setSearchValue(event.target.value);
               }}
+
             />
             <button
               type="submit"
