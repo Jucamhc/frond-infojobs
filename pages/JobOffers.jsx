@@ -3,70 +3,131 @@ import makeAnimated from 'react-select/animated';
 import Select from 'react-select'
 import { useRouter } from 'next/router';
 
-const JobOffers = ({ data }) => {
+const JobOffers = () => {
 
     const [selectData, setSelectData] = useState([]);
     const router = useRouter();
+    const [initialOptionsSelect, setInitialOptionsSelect] = useState([]);
 
     useEffect(() => {
         const queryData = router.query.searchData;
         if (queryData) {
             const searchData = JSON.parse(queryData);
             setSelectData(searchData);
+
+            console.log(searchData);
+            const newOptionsSelect = {
+
+                province: searchData.aggregation.province.map(item => ({
+                    value: item.value,
+                    label: item.label,
+                    count: item.count
+                })),
+                teleworking: searchData.aggregation.teleworking.map(item => ({
+                    value: item.value,
+                    label: item.label,
+                    count: item.count
+                })),
+                category: searchData.aggregation.category.map(item => ({
+                    value: item.value,
+                    label: item.label,
+                    count: item.count
+                })),
+
+                city: searchData.aggregation.city.map(item => ({
+                    value: item.value,
+                    label: item.label,
+                    count: item.count
+                })),
+
+                contractType: searchData.aggregation.contractType.map(item => ({
+                    value: item.value,
+                    label: item.label,
+                    count: item.count
+                })),
+
+                country: searchData.aggregation.country.map(item => ({
+                    value: item.value,
+                    label: item.label,
+                    count: item.count
+                })),
+
+                education: searchData.aggregation.education.map(item => ({
+                    value: item.value,
+                    label: item.label,
+                    count: item.count
+                })),
+                workday: searchData.aggregation.workday.map(item => ({
+                    value: item.value,
+                    label: item.label,
+                    count: item.count
+                }))
+            };
+
+            setInitialOptionsSelect(newOptionsSelect);
+            console.log(initialOptionsSelect);
         }
+
     }, [router.query]);
 
-    console.log(selectData);
 
 
     let dataSearch = {
-        province: [],
         date: [],
-        teleworking: []
+        province: [],
+        teleworking: [],
+        category: [],
+        city: [],
+        contractType: [],
+        country: [],
+        education: [],
+        workday: []
     };
     const [selectFecha, setSelectFecha] = useState([]);
     const [selectProvincia, setSelectProvincia] = useState([]);
     const [selectTeleworking, setSelectTeleworking] = useState([]);
+    const [selectCategory, setSelectCategory] = useState([]);
+    const [selectCity, setSelectCity] = useState([]);
+    const [selectContractType, setSelectContractType] = useState([]);
+    const [selectCountry, setSelectcountry] = useState([]);
+    const [selectEducation, setSelectEducation] = useState([]);
+    const [selectWorkday, setSelectWorkday] = useState([]);
 
     const handSelectProvincia = () => {
+        
+        dataSearch = {
+            date: [],
+            province: [],
+            teleworking: [],
+            category: [],
+            city: [],
+            contractType: [],
+            country: [],
+            education: [],
+            workday: []
+        };
+
         dataSearch.date.push(selectFecha)
         dataSearch.province.push(selectProvincia)
         dataSearch.teleworking.push(selectTeleworking)
-        console.log(data);
-        //console.log(dataSearch);
-        console.log(selectData);
+        dataSearch.category.push(selectCategory)
+        dataSearch.city.push(selectCity)
+        dataSearch.contractType.push(selectContractType)
+        dataSearch.country.push(selectCountry)
+        dataSearch.education.push(selectEducation)
+        dataSearch.workday.push(selectWorkday)
+        console.log(dataSearch);
     }
 
-    const optionsSelect = {
+    let optionsSelect = {
         date: [
             { value: 'ANY', label: "Cualquier Fecha" },
             { value: '_24_HOURS', label: "Ultimas 24 Horas" },
             { value: '_7_DAYS', label: "Ultimos 7 Dias" },
             { value: '_15_DAYS', label: "Ultimos 15 Dias" }
-        ],
-        province: [
-            { value: '33', label: "Madrid" },
-            { value: '9', label: "Barcelona" },
-            { value: '49', label: "Valencia/València" },
-            { value: '26', label: "Islas Baleares/Illes Balears" }
-        ],
-        teleworking: [
-            { value: '1', label: "Presencial" },
-            { value: '2', label: "Solo teletrabajo" },
-            { value: '3', label: "Híbrido" },
-            { value: '4', label: "Sin especificar" }
         ]
     }
 
-
-    const options = [
-
-        { value: '1', label: 'Choc' },
-        { value: '2', label: 'Strawberry' },
-        { value: '3', label: 'Vanilla' },
-        { value: '4', label: 'Vanilla' },
-        { value: '5', label: 'Vanilla' },
-    ]
 
     const animatedComponents = makeAnimated();
 
@@ -84,9 +145,7 @@ const JobOffers = ({ data }) => {
                     <button
                         type="submit"
                         className="flex-none rounded-md bg-[#2088c2] px-7 py-1 text-sm font-semibold text-white shadow-sm hover:bg-[#4993bc] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#2088c2]"
-                        onClick={handSelectProvincia}
-                    >
-
+                        onClick={handSelectProvincia}>
                         Filtrar
                     </button>
                 </div>
@@ -102,9 +161,7 @@ const JobOffers = ({ data }) => {
                                 defaultValue={[]}
                                 options={optionsSelect.date}
                                 isSearchable={false}
-                                onChange={(item) => setSelectFecha(item)}
-
-                            />
+                                onChange={(item) => setSelectFecha(item)} />
                         </li>
                         <li className='bg-gray-50 hover:bg-gray-100 rounded-lg my-3 p-2  items-center cursor-pointer'>
                             <label >Provincia</label>
@@ -114,7 +171,7 @@ const JobOffers = ({ data }) => {
                                 components={animatedComponents}
                                 defaultValue={[]}
                                 isMulti
-                                options={optionsSelect.province}
+                                options={initialOptionsSelect.province}
                                 isSearchable={true}
                                 onChange={(item) => setSelectProvincia(item)}
                             />
@@ -123,10 +180,11 @@ const JobOffers = ({ data }) => {
                             <label className='text-sm'>Presencial/Teletrabajo</label>
                             <Select
                                 className='w-full'
+                                isMulti
                                 closeMenuOnSelect={true}
                                 components={animatedComponents}
                                 defaultValue={[]}
-                                options={optionsSelect.teleworking}
+                                options={initialOptionsSelect.teleworking}
                                 isSearchable={false}
                                 onChange={(item) => setSelectTeleworking(item)}
                             />
@@ -139,29 +197,32 @@ const JobOffers = ({ data }) => {
                                 components={animatedComponents}
                                 defaultValue={[]}
                                 isMulti
-                                options={options}
+                                options={initialOptionsSelect.category}
+                                onChange={(item) => setSelectCategory(item)}
                             />
                         </li>
                         <li className='bg-gray-50 hover:bg-gray-100 rounded-lg my-3 p-2 items-center cursor-pointer'>
-                            <label className='text-sm'>Experiencia (años)</label>
+                            <label className='text-sm'>Ciudad</label>
                             <Select
                                 className='w-full'
                                 closeMenuOnSelect={true}
                                 components={animatedComponents}
                                 defaultValue={[]}
                                 isMulti
-                                options={options}
+                                options={initialOptionsSelect.city}
+                                onChange={(item) => setSelectCity(item)}
                             />
                         </li>
                         <li className='bg-gray-50 hover:bg-gray-100 rounded-lg my-3 p-2  items-center cursor-pointer'>
-                            <label >Jornada laboral</label>
+                            <label >Pais</label>
                             <Select
                                 className='w-full'
                                 closeMenuOnSelect={true}
                                 components={animatedComponents}
                                 defaultValue={[]}
                                 isMulti
-                                options={options}
+                                options={initialOptionsSelect.country}
+                                onChange={(item) => setSelectcountry(item)}
                             />
                         </li>
                         <li className='bg-gray-50 hover:bg-gray-100 rounded-lg my-3 p-2 items-center cursor-pointer'>
@@ -172,7 +233,32 @@ const JobOffers = ({ data }) => {
                                 components={animatedComponents}
                                 defaultValue={[]}
                                 isMulti
-                                options={options}
+                                options={initialOptionsSelect.contractType}
+                                onChange={(item) => setSelectContractType(item)}
+                            />
+                        </li>
+                        <li className='bg-gray-50 hover:bg-gray-100 rounded-lg my-3 p-2 items-center cursor-pointer'>
+                            <label className='text-sm'>Educacion</label>
+                            <Select
+                                className='w-full'
+                                closeMenuOnSelect={true}
+                                components={animatedComponents}
+                                defaultValue={[]}
+                                isMulti
+                                options={initialOptionsSelect.education}
+                                onChange={(item) => setSelectEducation(item)}
+                            />
+                        </li>
+                        <li className='bg-gray-50 hover:bg-gray-100 rounded-lg my-3 p-2 items-center cursor-pointer'>
+                            <label className='text-sm'>Tipo de Conrtrato</label>
+                            <Select
+                                className='w-full'
+                                closeMenuOnSelect={true}
+                                components={animatedComponents}
+                                defaultValue={[]}
+                                isMulti
+                                options={initialOptionsSelect.workday}
+                                onChange={(item) => setSelectWorkday(item)}
                             />
                         </li>
                     </ul>

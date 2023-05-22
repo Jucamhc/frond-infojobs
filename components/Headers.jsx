@@ -26,7 +26,7 @@ const Headers = () => {
   }
 
   const suggestedText = (value) => {
-    console.log(value);
+    //console.log(value);
     setSearchValue(value);
     setSuggestions([])
   }
@@ -90,7 +90,6 @@ const Headers = () => {
               autocomplete="off"
               id="busqueda"
               type="text"
-              autoComplete="email"
               required
               value={searchValue}
               className="min-w-0 flex-1 rounded-md border-2 px-3.5 py-1 shadow-sm ring-1 ring-inset sm:text-sm sm:leading-6"

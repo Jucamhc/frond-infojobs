@@ -64,7 +64,6 @@ const urlApi = () => {
                     id='email-address'
                     name='busqueda'
                     type='text'
-                    autoComplete='email'
                     value={'https://api-infojobs.hop.sh/api-offers/desarrollo%20Web/1'}
                     required
                     className='w-full flex rounded-md border-2 px-3 py-1 shadow-sm ring-1 ring-inset sm:text-sm sm:leading-6'
@@ -115,7 +114,6 @@ const urlApi = () => {
                     id='email-address'
                     name='busqueda'
                     type='text'
-                    autoComplete='email'
                     value={'https://api-infojobs.hop.sh/api-offers/desarrollo%20Web/1'}
                     required
                     className='w-full flex rounded-md border-2 px-3 py-1 shadow-sm ring-1 ring-inset sm:text-sm sm:leading-6'
@@ -166,7 +164,6 @@ const urlApi = () => {
                     id='email-address'
                     name='busqueda'
                     type='text'
-                    autoComplete='email'
                     value={'https://api-infojobs.hop.sh/api-offers/desarrollo%20Web/1'}
                     required
                     className='w-full flex rounded-md border-2 px-3 py-1 shadow-sm ring-1 ring-inset sm:text-sm sm:leading-6'
@@ -217,7 +214,6 @@ const urlApi = () => {
                     id='email-address'
                     name='busqueda'
                     type='text'
-                    autoComplete='email'
                     value={'https://api-infojobs.hop.sh/api-offers/desarrollo%20Web/1'}
                     required
                     className='w-full flex rounded-md border-2 px-3 py-1 shadow-sm ring-1 ring-inset sm:text-sm sm:leading-6'
@@ -268,7 +264,6 @@ const urlApi = () => {
                     id='email-address'
                     name='busqueda'
                     type='text'
-                    autoComplete='email'
                     value={'https://api-infojobs.hop.sh/api-offers/desarrollo%20Web/1'}
                     required
                     className='w-full flex rounded-md border-2 px-3 py-1 shadow-sm ring-1 ring-inset sm:text-sm sm:leading-6'
@@ -319,7 +314,6 @@ const urlApi = () => {
                     id='email-address'
                     name='busqueda'
                     type='text'
-                    autoComplete='email'
                     value={'https://api-infojobs.hop.sh/api-offers/desarrollo%20Web/1'}
                     required
                     className='w-full flex rounded-md border-2 px-3 py-1 shadow-sm ring-1 ring-inset sm:text-sm sm:leading-6'
@@ -370,7 +364,6 @@ const urlApi = () => {
                     id='email-address'
                     name='busqueda'
                     type='text'
-                    autoComplete='email'
                     value={'https://api-infojobs.hop.sh/api-offers/desarrollo%20Web/1'}
                     required
                     className='w-full flex rounded-md border-2 px-3 py-1 shadow-sm ring-1 ring-inset sm:text-sm sm:leading-6'
@@ -421,7 +414,6 @@ const urlApi = () => {
                     id='email-address'
                     name='busqueda'
                     type='text'
-                    autoComplete='email'
                     value={'https://api-infojobs.hop.sh/api-offers/desarrollo%20Web/1'}
                     required
                     className='w-full flex rounded-md border-2 px-3 py-1 shadow-sm ring-1 ring-inset sm:text-sm sm:leading-6'
@@ -472,7 +464,6 @@ const urlApi = () => {
                     id='email-address'
                     name='busqueda'
                     type='text'
-                    autoComplete='email'
                     value={'https://api-infojobs.hop.sh/api-offers/desarrollo%20Web/1'}
                     required
                     className='w-full flex rounded-md border-2 px-3 py-1 shadow-sm ring-1 ring-inset sm:text-sm sm:leading-6'
@@ -523,7 +514,6 @@ const urlApi = () => {
                     id='email-address'
                     name='busqueda'
                     type='text'
-                    autoComplete='email'
                     value={'https://api-infojobs.hop.sh/api-offers/desarrollo%20Web/1'}
                     required
                     className='w-full flex rounded-md border-2 px-3 py-1 shadow-sm ring-1 ring-inset sm:text-sm sm:leading-6'
