@@ -5,7 +5,6 @@ import { fetchData, fetchDataJobs } from '../data/fetchData'
 import { useRouter } from 'next/router';
 import Link from 'next/link'
 
-import JobOffers from '@/pages/JobOffers';
 
 const Headers = () => {
 
@@ -15,6 +14,8 @@ const Headers = () => {
 
   const [searchValue, setSearchValue] = useState('');
   const [suggestions, setSuggestions] = useState([]);
+  const [searchData, setSearchData] = useState(null);
+
   const router = useRouter();
 
   const data = async (type) => {
@@ -32,24 +33,19 @@ const Headers = () => {
   }
 
   const search = async () => {
-    let searchData = await fetchDataJobs()
-
+    const formattedSearchValue = searchValue.replace(/ /g, "%20");
+    const searchData = await fetchDataJobs(formattedSearchValue);
+    setSearchData(searchData);
+  
     const queryParams = new URLSearchParams();
     queryParams.append('searchData', JSON.stringify(searchData));
-
-    router.push({
-      pathname: '/JobOffers',
-      search: queryParams.toString(),
-    });
-
-    const url = window.location.href;
-    const domain = window.location.origin;
-    const path = url.replace(domain, '');
-
-    if ("/JobOffers" !== path) {
-      router.push('/JobOffers');
-    }
-  }
+  
+    const url = new URL('/JobOffers', window.location.href);
+    url.search = queryParams.toString();
+  
+    router.push(url.toString());
+  };
+  
 
   const renderSuggestions = () => {
 
@@ -87,7 +83,7 @@ const Headers = () => {
 
           <div className='flex w-full max-w-md gap-x-2'>
             <input
-              autocomplete="off"
+              autoComplete="off"
               id="busqueda"
               type="text"
               required
