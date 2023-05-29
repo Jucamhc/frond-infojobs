@@ -14,13 +14,6 @@ Realiza
 
 Abrelo en [http://localhost:3000](http://localhost:3000) con tu navegador.
 
-## Tecnologías utilizadas 
-• React
-• accounting
-• mui/materia
-• gh-pages
-• react-router-dom
-
 ## Descubre este proyecto:
 
 > - Optimizando la búsqueda de empleo: Un enfoque innovador basado en habilidades y feedback personalizado
@@ -51,13 +44,23 @@ La plataforma ha sido diseñada considerando el inicio de sesión del perfil de 
 
 ## Explora infinitas oportunidades laborales: accede a una API sin restricciones en Infojobs
 
-![image](https://github.com/Jucamhc/frond-infojobs/assets/54044345/2d327932-78b3-4c80-ae2c-1267e616c0f0)
+![image](https://github.com/Jucamhc/frond-infojobs/assets/54044345/9807347d-a256-4341-848c-38c627195ee9)
 
 ## Explora el mercado laboral: análisis, gráficos y gestión personalizada de tu perfil
 
 ![image](https://github.com/Jucamhc/frond-infojobs/assets/54044345/d0ff4fa0-8544-4f61-a3ad-7496e1ecbb18)
 
-
-
-
+## Tecnologías utilizadas 
+• chart.js
+• next
+• @headlessui/react
+• React
+• react-chartjs-2
+• react-dom
+• react-icons
+• react-infinite-scroll-component
+• react-json-formatter
+• react-select
+• recharts
+• tailwindcss
 
