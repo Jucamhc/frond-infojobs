@@ -5,7 +5,7 @@ import { RiToolsLine } from 'react-icons/ri';
 
 const RecentOrders = () => {
   return (
-    <div className='w-full col-span-1  lg:h-[295vh] h-[70vh]  p-4 border rounded-lg bg-white overflow-hidden'>
+    <div className='w-full col-span-1  lg:h-[44%] h-[70vh]  p-4 border rounded-lg bg-white overflow-hidden'>
       <h1 className='text-2xl font-bold mb-4 text-center'>
         <RiToolsLine className='inline-block mr-2 text-xl' />
         Herramientas Web Utilizadas

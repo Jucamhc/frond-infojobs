@@ -92,11 +92,11 @@ const Profile = () => {
 
         {/* Primer Diagrama */}
         <div className="text-center mb-2">
-          <h1 className="text-2xl font-bold">Categoría Preferida</h1>
+          <h1 className="text-xl font-bold">Categoría Preferida</h1>
           <p id="nameCategoria">{nameCategory || "Informática-Telecomunicaciones"}</p>
         </div>
 
-        <p className='mt-3 ml-4 underline text-left text-sm underline-offset-8 font-semibold'>Ofertas: {infoCount}</p>
+        <p className='mt-5 ml-4 underline text-left text-sm underline-offset-8 font-semibold'>Ofertas: {infoCount}</p>
 
 
         <p className='mt-5 underline text-right mr-6 text-sm underline-offset-8 font-semibold'>Presencial/Teletrabajo</p>

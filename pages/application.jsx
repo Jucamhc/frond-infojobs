@@ -108,7 +108,7 @@ const application = () => {
                         </div>
                         <div className='flex-1 border-t-2 border-gray-300'></div>
                         <div className={`flex flex-col items-center ${order.process >= 4 ? 'text-white' : 'text-gray-300'}`}>
-                          <div className={`flex items-center justify-center bg-gray-200 rounded-full w-6 h-6 ${order.process >= 4 ? ' font-bold bg-blue-500' : ''}`}>
+                          <div className={`flex items-center justify-center bg-gray-200 rounded-full w-6 h-6 ${order.process >= 4 ? ' font-bold bg-blue-600' : ''}`}>
                             {order.process >= 4 ? <MdOutlineVerified className='text-3xl' /> : null}
                           </div>
                           <p className='text-xs text-gray-500 mt-1'>Finalista</p>
