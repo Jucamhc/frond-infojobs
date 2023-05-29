@@ -2,6 +2,8 @@
 
 La web de demo InfoJobs ha sido creada con el objetivo de conectar a profesionales y empresas en el ámbito laboral. Nuestra plataforma ofrece a los usuarios la posibilidad de buscar empleo de manera eficiente y personalizada. Mediante filtros específicos, los candidatos pueden encontrar ofertas laborales actualizadas y ajustadas a sus preferencias. Además, demo web InfoJobs utiliza un sistema de feedback personalizado que compara la hoja de vida del usuario con cada oferta disponible, brindando sugerencias y recomendaciones relevantes. Nuestro objetivo es ser una plataforma confiable y completa que facilite la búsqueda de empleo y proporcione recursos para mejorar el proceso de selección.
 
+## Proyecto desplegado
+URL: [https://frond-infojobs.vercel.app/](https://frond-infojobs.vercel.app/)
 
 ## Instalacion
 
