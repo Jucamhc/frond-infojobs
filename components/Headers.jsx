@@ -72,16 +72,19 @@ const Headers = () => {
 
   return (
 
-    <div className='flex bg-gray-100 justify-between px-4 pt-2'>
-      <div className='my-3 w-[50%] h-[90px] '>
-        <img className='w-full h-full' src="https://tpc.googlesyndication.com/simgad/9279042036256268657" alt="" />
+    <div className="flex flex-col md:flex-row bg-gray-100 justify-between px-4 pt-2">
+      <div className="w-full md:w-[50%]">
+        <div className="my-3 h-[90px] ">
+          <img className="w-full h-full" src="https://tpc.googlesyndication.com/simgad/9279042036256268657" alt="" />
+        </div>
       </div>
 
-      <li className='flex w-[30%] bg-white rounded-lg my-3 items-center justify-between'>
-        <div className="ml-2 flex-wrap w-[95%]">
-          <label className='text-sm flex-1'>Busco ofertas de...</label>
+      <div className="flex flex-col md:flex-row w-full md:w-[30%] bg-white rounded-lg my-3 items-center justify-between">
+        <div className="ml-2 flex-wrap w-full md:max-w-md mr-2">
+          <label className="text-sm flex-1 ml-2">Busco ofertas de...</label>
 
-          <div className='flex w-full max-w-md gap-x-2'>
+          <div className="flex flex-wrap items-center w-full max-w-md gap-x-2">
+            {/* Input field */}
             <input
               autoComplete="off"
               id="busqueda"
@@ -91,32 +94,36 @@ const Headers = () => {
               className="min-w-0 flex-1 rounded-md border-2 px-3.5 py-1 shadow-sm ring-1 ring-inset sm:text-sm sm:leading-6"
               placeholder="Puesto, empresa o palabra clave"
               onChange={(event) => {
-                data(event.target.value)
+                data(event.target.value);
                 setSearchValue(event.target.value);
               }}
-
             />
+
+            {/* Search button */}
             <button
               type="submit"
-              className="flex-none rounded-md bg-[#2088c2] px-5 py-1 text-sm font-semibold text-white shadow-sm hover:bg-[#4993bc] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#2088c2]"
+              className="flex-none rounded-md bg-[#2088c2] px-5 py-1 text-sm font-semibold text-white shadow-sm hover:bg-[#4993bc] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#2088c2] flex-shrink-0"
               onClick={() => {
-                search()
+                search();
               }}
             >
               Buscar
             </button>
           </div>
+
           {renderSuggestions()}
         </div>
-      </li>
+      </div>
 
-      <li className='flex bg-white rounded-lg my-3 p-2 items-center justify-center'>
-        <div className="flex items-center ">
-          <RiNotification3Fill className="h-7 w-7 ml-1 text-gray-300 " aria-hidden="true" />
+
+      <div className="flex bg-white rounded-lg my-3 p-2 items-center justify-center">
+        <div className="flex items-center">
+          <RiNotification3Fill className="h-7 w-7 ml-1 text-gray-300" aria-hidden="true" />
         </div>
 
-        <div className="flex items-center  justify-between">
-          <Menu as="div" className="relative ml-5">
+        <div className="flex items-center ml-2">
+          {/* User menu */}
+          <Menu as="div" className="relative">
             <div>
               <Menu.Button className="flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                 <span className="sr-only">Open user menu</span>
@@ -127,6 +134,7 @@ const Headers = () => {
                 />
               </Menu.Button>
             </div>
+
             <Transition
               enter="transition ease-out duration-100"
               enterFrom="transform opacity-0 scale-95"
@@ -139,21 +147,12 @@ const Headers = () => {
                 <Menu.Item>
                   {({ active }) => (
                     <Link href="/profile">
-                      <p className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')} >
+                      <p className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}>
                         Tu Perfil
                       </p>
                     </Link>
                   )}
                 </Menu.Item>
-                {/*                 <Menu.Item>
-                  {({ active }) => (
-                    <Link href="/settings">
-                      <p className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}>
-                        Configuraciones
-                      </p>
-                    </Link>
-                  )}
-                </Menu.Item> */}
                 <Menu.Item>
                   {({ active }) => (
                     <a
@@ -168,9 +167,10 @@ const Headers = () => {
             </Transition>
           </Menu>
         </div>
-      </li>
-
+      </div>
     </div>
+
+
   )
 }
 

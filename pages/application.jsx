@@ -22,7 +22,7 @@ const application = () => {
           <ul>
             {dataApplication.map((order, id) => (
               <a
-              href={order?.url} target="_blank" rel="noreferrer" 
+                href={order?.url} target="_blank" rel="noreferrer"
                 key={id}
                 className={
                   order.name === 'OFERTA PATROCINADA'
@@ -49,7 +49,7 @@ const application = () => {
                 <div className='text-center items-center'>
                   <p className='flex items-center  justify-center '>
 
-                    <FcReadingEbook  className='mr-1 text-xl' />{order.enrolled}
+                    <FcReadingEbook className='mr-1 text-xl' />{order.enrolled}
                   </p>
                 </div>
 
@@ -63,7 +63,7 @@ const application = () => {
                       </text>
                     </svg>
                   </div>
-                     
+
                 </div>
 
                 <div className='text-center items-center'>
@@ -73,8 +73,7 @@ const application = () => {
                         <div className={`flex items-center justify-center bg-gray-200 rounded-full w-6 h-6 ${order.process >= 1 ? 'bg-red-500' : ''}`}>
                           {order.calcel === 1 ? <FcDisapprove className='text-red-500 text-3xl' /> : null}
                         </div>
-{/*                         <p className='text-xs text-gray-500 mt-1 font-bold'>No Aplica</p>
- */}                        <p className='text-xs text-gray-500 font-bold'>Proceso Finalizado</p>
+                        <p className='text-xs text-gray-500 font-bold'>Proceso Finalizado</p>
                       </div>
                     ) : order.calcel === 2 ? (
                       <div className={`flex flex-col items-center ${order.process >= 1 ? 'text-green-500' : 'text-gray-300'}`}>
@@ -107,20 +106,24 @@ const application = () => {
                           <p className='text-xs text-gray-500 mt-1'>En proceso</p>
                         </div>
                         <div className='flex-1 border-t-2 border-gray-300'></div>
-                        <div className={`flex flex-col items-center ${order.process >= 4 ? 'text-white' : 'text-gray-300'}`}>
-                          <div className={`flex items-center justify-center bg-gray-200 rounded-full w-6 h-6 ${order.process >= 4 ? ' font-bold bg-blue-600' : ''}`}>
-                            {order.process >= 4 ? <MdOutlineVerified className='text-3xl' /> : null}
+                        {order.process >= 4 ?
+                          <div className={`flex flex-col items-center  text-white `}>
+                            <div className={`flex items-center justify-center  rounded-full w-6 h-6 font-bold bg-blue-500 `}>
+                              <MdOutlineVerified className='text-3xl' /> 
+                            </div>
+                            <p className='text-xs text-gray-500 mt-1'>Finalista</p>
                           </div>
-                          <p className='text-xs text-gray-500 mt-1'>Finalista</p>
-                        </div>
+                          :
+                          <div className={`flex flex-col items-center text-gray-300`}>
+                            <div className={`flex items-center justify-center bg-gray-200 rounded-full w-6 h-6`}>
+                            </div>
+                            <p className='text-xs text-gray-500 mt-1'>Finalista</p>
+                          </div>
+                        }
                       </>
                     )}
                   </div>
                 </div>
-
-
-
-
 
               </a>
             ))}

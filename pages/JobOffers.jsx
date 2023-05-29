@@ -324,7 +324,7 @@ const JobOffers = () => {
             subcategoryIdsSearch)
         );
 
-            //console.log(secondData.offers);
+        //console.log(secondData.offers);
         setLoadData(true);
 
 
@@ -391,9 +391,8 @@ const JobOffers = () => {
     return (
         <div className='bg-gray-100'>
 
-            <div className='flex justify-between mx-4  '>
-
-                <h1 className='text-1xl font-bold '>
+            <div className='flex flex-col md:flex-row justify-between mx-4'>
+                <h1 className='text-1xl font-bold mb-2 md:mb-0'>
                     Ofertas de Empleo ..... Busca la mejor
                 </h1>
 
@@ -413,6 +412,7 @@ const JobOffers = () => {
                     </div>
                 </h1>
             </div>
+
 
             <div className='p-3 grid md:grid-cols-3 grid-cols-1 gap-2 bg-gray-100'>
                 <div id="scrollableDiv" className="overflow-y-auto w-full md:col-span-2 lg:h-[79vh] h-[50vh] m-auto p-2 border rounded-lg bg-white">
@@ -472,7 +472,7 @@ const JobOffers = () => {
 
 
 
-                <div className='w-full col-span-1 lg:h-[79vh] h-[80%] m-auto p-4 border rounded-lg bg-white'>
+                <div className='w-full col-span-1  lg:h-[100%] h-[70vh]  p-4 border rounded-lg bg-white overflow-hidden'>
                     <div className='flex justify-between p-1'>
                         <h1>Filtros de {initialOptionsSelect?.navigation?.totalElements ? initialOptionsSelect?.navigation?.totalElements : 0} Ofertas</h1>
                         <button
@@ -483,7 +483,7 @@ const JobOffers = () => {
                         </button>
                     </div>
 
-                    <div className='w-full col-span-1 lg:h-[68vh] h-[50%] m-auto p-3 border rounded-lg overflow-y-auto'>
+                    <div className='w-full h-full col-span-1 lg:h-[68vh]  m-auto p-3 border rounded-lg overflow-y-auto'>
                         <ul>
                             <li key='fecha' className='bg-gray-50 hover:bg-gray-100 rounded-lg my-3 p-2 items-center cursor-pointer'>
                                 <label htmlFor='fecha'>Fecha</label>
@@ -635,7 +635,7 @@ const JobOffers = () => {
                                         label: `${item.label} (${item.count})`,
                                     })) : []}
                                     onChange={(item) => setSelectWorkday(item)}
-                                    //onClick={(item) => {handSelectProvincia(); setSelectWorkday(item);}}
+                                //onClick={(item) => {handSelectProvincia(); setSelectWorkday(item);}}
                                 />
                             </li>
                         </ul>
