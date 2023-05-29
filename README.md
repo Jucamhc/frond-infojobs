@@ -64,3 +64,21 @@ La plataforma ha sido diseñada considerando el inicio de sesión del perfil de 
 • recharts
 • tailwindcss
 
+
+# Vistas Para Movil
+
+## Pagina principal
+![WhatsApp Image 2023-05-29 at 4 56 19 PM](https://github.com/Jucamhc/frond-infojobs/assets/54044345/e7a3ad8b-4885-4a16-acc4-3cd501096405)
+
+## Empleos Con las habilidades 
+![WhatsApp Image 2023-05-29 at 4 56 20 PM (1)](https://github.com/Jucamhc/frond-infojobs/assets/54044345/a41f5650-1cb5-42b5-91ac-efcfbbec771e)
+
+
+## Ofertas Aplicadas
+![WhatsApp Image 2023-05-29 at 4 56 20 PM](https://github.com/Jucamhc/frond-infojobs/assets/54044345/a800935c-8421-4fa5-bab0-925128427202)
+
+
+## Empresas que miraron mi perfil
+![WhatsApp Image 2023-05-29 at 4 56 19 PM (1)](https://github.com/Jucamhc/frond-infojobs/assets/54044345/5e315662-8270-45ec-add8-576e0a62223a)
+
+
