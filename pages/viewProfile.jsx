@@ -20,12 +20,13 @@ const viewProfile = () => {
           </div>
           <ul>
             {dataViewProfile.map((order, id) => (
-              <li
+              <a
+                href={order?.url} target="_blank" rel="noreferrer"
                 key={id}
                 className={
                   order.name === 'OFERTA PATROCINADA'
-                    ? 'bg-blue-50 hover:bg-gray-100 rounded-lg my-3 p-2 grid md:grid-cols-5 sm:grid-cols-3 grid-cols-2 items-center justify-between cursor-pointer'
-                    : 'bg-gray-50 hover:bg-gray-100 rounded-lg my-3 p-2 grid md:grid-cols-5 sm:grid-cols-3 grid-cols-2 items-center justify-between cursor-pointer'
+                    ? 'bg-blue-50 hover:bg-gray-200 rounded-lg my-3 p-2 grid md:grid-cols-5 sm:grid-cols-3 grid-cols-2 items-center justify-between cursor-pointer'
+                    : 'bg-gray-50 hover:bg-gray-200 rounded-lg my-3 p-2 grid md:grid-cols-5 sm:grid-cols-3 grid-cols-2 items-center justify-between cursor-pointer'
                 }
               >
                 <div className='flex items-center'>
@@ -66,7 +67,7 @@ const viewProfile = () => {
                     <FaComment className='mr-1' /> {order.opinions} Opiniones
                   </p>
                 </div>
-              </li>
+              </a>
             ))}
           </ul>
         </div>

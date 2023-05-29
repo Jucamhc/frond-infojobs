@@ -28,9 +28,14 @@ export async function fetchDataJobsDetail(keyword, normalizedJobTitleIds, provin
         `subcategoryIds=${subcategoryIds || ''}`;
 
     //console.log("keyword ", keyword, " \n \n normalizedJobTitleIds ", normalizedJobTitleIds, "\n \n provinceIds ", provinceIds, " \n \cityIds ", cityIds, "\n\n teleworkingIds ", teleworkingIds, "\n\n categoryIds ", categoryIds, " \n\workdayIds ", workdayIds, " \n\educationIds ", educationIds, " \n\segmentId ", segmentId, "\n\n contractTypeIdsSearch ", contractTypeIds, " \n\npage ", page, " \n\n sortBy ", sortBy, "\n\n onlyForeignCountry ", onlyForeignCountry, " \n\n countryIds ", countryIds, "\n\n sinceDate ", sinceDate, " \n\n subcategoryIds ", subcategoryIds);
-
+    //console.log(url);
     return await fetch(url)
         .then((response) => response.json());
 }
 
+
+export function fetchDataProfile(type) {
+    return fetch(`https://api-infojobs.hop.sh/filtradoSkill`)
+        .then((response) => response.json());
+}
 

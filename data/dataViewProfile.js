@@ -9,7 +9,8 @@ export const dataViewProfile = [
         offer: 17,
         compatible: 2,
         qualification: '5',
-        opinions: 1
+        opinions: 1,
+        url: "https://abde-bc.ofertas-trabajo.infojobs.net/"
     },
     {
         id: 2,
@@ -21,7 +22,8 @@ export const dataViewProfile = [
         offer: 7,
         compatible: 1,
         qualification: 4.4,
-        opinions: 32
+        opinions: 32,
+        url: "https://www.infojobs.net/abast/em-i962052524526202750973215255102"
     },
     {
         id: 3,
@@ -45,7 +47,8 @@ export const dataViewProfile = [
         offer: 74,
         compatible: 12,
         qualification: 4.3,
-        opinions: 101
+        opinions: 101,
+        url: "https://aubay.ofertas-trabajo.infojobs.net/"
     },
     {
         id: 5,
@@ -57,7 +60,8 @@ export const dataViewProfile = [
         offer: 43,
         compatible: 3,
         qualification: 5,
-        opinions: 5
+        opinions: 5,
+        url: "https://meltconsulting.ofertas-trabajo.infojobs.net/"
     },
     {
         id: 6,
@@ -69,7 +73,8 @@ export const dataViewProfile = [
         offer: 20,
         compatible: 7,
         qualification: 4.6,
-        opinions: 10
+        opinions: 10,
+        url: "https://www.infojobs.net/alvea-soluciones-tecnologicas-s.l./em-i98565648505348657686692018216272602945"
     },
     {
         id: 7,

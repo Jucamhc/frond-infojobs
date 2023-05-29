@@ -36,16 +36,16 @@ const Headers = () => {
     const formattedSearchValue = searchValue.replace(/ /g, "%20");
     const searchData = await fetchDataJobs(formattedSearchValue);
     setSearchData(searchData);
-  
+
     const queryParams = new URLSearchParams();
     queryParams.append('searchData', JSON.stringify(searchData));
-  
+
     const url = new URL('/JobOffers', window.location.href);
     url.search = queryParams.toString();
-  
+
     router.push(url.toString());
   };
-  
+
 
   const renderSuggestions = () => {
 
@@ -145,7 +145,7 @@ const Headers = () => {
                     </Link>
                   )}
                 </Menu.Item>
-                <Menu.Item>
+                {/*                 <Menu.Item>
                   {({ active }) => (
                     <Link href="/settings">
                       <p className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}>
@@ -153,14 +153,14 @@ const Headers = () => {
                       </p>
                     </Link>
                   )}
-                </Menu.Item>
+                </Menu.Item> */}
                 <Menu.Item>
                   {({ active }) => (
                     <a
                       href="#"
                       className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
                     >
-                      Sign out
+                      Cerrar Sesión
                     </a>
                   )}
                 </Menu.Item>

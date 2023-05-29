@@ -1,9 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-import Image from 'next/image'
-import { RxBarChart } from 'react-icons/rx'
-import { AiFillApi, AiOutlineMail, AiOutlineEye  } from "react-icons/ai";
-import { FaSearchengin } from "react-icons/fa";
+import { FaSearch, FaExchangeAlt, FaEye, FaCheckSquare } from "react-icons/fa";
 import { BsFacebook, BsTwitter, BsYoutube } from 'react-icons/bs';
 
 const Sidebar = ({ children }) => {
@@ -26,41 +23,46 @@ const Sidebar = ({ children }) => {
                         </div>
                     </Link>
                     <span className='border-b-[1px] border-gray-200 w-full p-2'></span>
-                    <Link href="/anality">
+                    {/* <Link href="/anality">
                         <div className='bg-gray-100 hover:bg-gray-200 cursor-pointer my-4 p-3 rounded-lg inline-block'>
                             <RxBarChart size={20} />
                         </div>
-                    </Link>
+                    </Link> */}
                     <Link href="/JobOffers">
                         <div className='bg-gray-100 hover:bg-gray-200 cursor-pointer my-4 p-3 rounded-lg inline-block'>
-                            <FaSearchengin size={20} />
+                            <FaSearch size={20} />
                         </div>
                     </Link>
                     <Link href="/application">
                         <div className='bg-gray-100 hover:bg-gray-200 cursor-pointer my-4 p-3 rounded-lg inline-block'>
-                            <AiOutlineMail size={20} />
+                            <FaCheckSquare size={20} />
                         </div>
                     </Link>
                     <Link href="/viewProfile">
                         <div className='bg-gray-100 hover:bg-gray-200 cursor-pointer my-4 p-3 rounded-lg inline-block'>
-                            <AiOutlineEye size={20} />
+                            <FaEye size={20} />
                         </div>
                     </Link>
                     <Link href="/urlApi">
                         <div className='bg-gray-100 hover:bg-gray-200 cursor-pointer my-4 p-3 rounded-lg inline-block'>
-                            <AiFillApi size={20} />
+                            <FaExchangeAlt size={20} />
                         </div>
                     </Link>
                 </div>
                 <li className='flex rounded-lg items-center justify-center'>
                     <div className="justify-center">
-                        <h2> 
-                            <p className='flex'> <BsFacebook className=' text-blue-600' /> <BsTwitter className='ml-2 text-blue-400' /> <BsYoutube className='ml-2 text-red-500' /></p></h2>
+                        <h2>
+                            <p className='flex'>
+                                <a href='https://www.facebook.com/InfoJobs' target="_blank" rel="noreferrer"><BsFacebook className=' text-blue-600 cursor-pointer' /> </a>
+                                <a href='https://twitter.com/InfoJobs' target="_blank" rel="noreferrer"><BsTwitter className='ml-2 text-blue-400 cursor-pointer' /> </a>
+                                <a href='https://www.youtube.com/user/InfoJobsNET' target="_blank" rel="noreferrer"> <BsYoutube className='ml-2 text-red-500 cursor-pointer' /> </a>
+                            </p>
+                        </h2>
                     </div>
                 </li>
-            </div>
+            </div >
             <main className='ml-20 w-full'>{children} </main>
-        </div>
+        </div >
     )
 }
 

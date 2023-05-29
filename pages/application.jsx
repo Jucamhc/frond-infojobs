@@ -21,12 +21,13 @@ const application = () => {
           </div>
           <ul>
             {dataApplication.map((order, id) => (
-              <li
+              <a
+              href={order?.url} target="_blank" rel="noreferrer" 
                 key={id}
                 className={
                   order.name === 'OFERTA PATROCINADA'
-                    ? 'bg-blue-50 hover:bg-gray-100 rounded-lg my-3 p-2 grid md:grid-cols-5 sm:grid-cols-3 grid-cols-2 items-center justify-between cursor-pointer'
-                    : 'bg-gray-50 hover:bg-gray-100 rounded-lg my-3 p-2 grid md:grid-cols-5 sm:grid-cols-3 grid-cols-2 items-center justify-between cursor-pointer'
+                    ? 'bg-blue-50 hover:bg-gray-200 rounded-lg my-3 p-2 grid md:grid-cols-5 sm:grid-cols-3 grid-cols-2 items-center justify-between cursor-pointer'
+                    : 'bg-gray-50 hover:bg-gray-200 rounded-lg my-3 p-2 grid md:grid-cols-5 sm:grid-cols-3 grid-cols-2 items-center justify-between cursor-pointer'
                 }
               >
                 <div className='flex items-center'>
@@ -107,7 +108,7 @@ const application = () => {
                         </div>
                         <div className='flex-1 border-t-2 border-gray-300'></div>
                         <div className={`flex flex-col items-center ${order.process >= 4 ? 'text-white' : 'text-gray-300'}`}>
-                          <div className={`flex items-center justify-center bg-gray-200 rounded-full w-6 h-6 ${order.process >= 4 ? ' font-bold bg-blue-400' : ''}`}>
+                          <div className={`flex items-center justify-center bg-gray-200 rounded-full w-6 h-6 ${order.process >= 4 ? ' font-bold bg-blue-500' : ''}`}>
                             {order.process >= 4 ? <MdOutlineVerified className='text-3xl' /> : null}
                           </div>
                           <p className='text-xs text-gray-500 mt-1'>Finalista</p>
@@ -121,7 +122,7 @@ const application = () => {
 
 
 
-              </li>
+              </a>
             ))}
           </ul>
         </div>
