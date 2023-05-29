@@ -93,13 +93,13 @@ const Profile = () => {
         {/* Primer Diagrama */}
         <div className="text-center mb-2">
           <h1 className="text-xl font-bold">Categoría Preferida</h1>
-          <p id="nameCategoria">{nameCategory || "Informática-Telecomunicaciones"}</p>
+          <p className='text-xs' id="nameCategoria">{nameCategory || "Informática-Telecomunicaciones"}</p>
         </div>
 
-        <p className='mt-5 ml-4 underline text-left text-sm underline-offset-8 font-semibold'>Ofertas: {infoCount}</p>
+        <p className='mt-5 ml-4 underline text-left text-xs underline-offset-8 font-semibold'>Ofertas: {infoCount}</p>
 
 
-        <p className='mt-5 underline text-right mr-6 text-sm underline-offset-8 font-semibold'>Presencial/Teletrabajo</p>
+        <p className='mt-5 underline text-right mr-6 text-xs underline-offset-8 font-semibold'>Presencial/Teletrabajo</p>
         <div style={{ overflow: 'hidden', width: '100%' }}>
           {domLoaded && infoData?.teleworking && (
             <PieChart width={320} height={300}>
@@ -139,8 +139,8 @@ const Profile = () => {
 
 
         {/* Segundo Diagrama */}
-        <p className='mt-6 underline text-right mr-6 text-sm underline-offset-8 font-semibold'>Trabajos por Paises</p>
-        <p className='mt-3 ml-4 underline text-left text-sm underline-offset-8 font-semibold'>Solo España 99%</p>
+        <p className='mt-6 underline text-xs text-right mr-6  underline-offset-8 font-semibold'>Trabajos por Paises</p>
+        <p className='mt-3 ml-4 underline text-xs text-left  underline-offset-8 font-semibold'>Solo España 99%</p>
 
         <dataPieChart />
         <div style={{ overflow: 'hidden' }}>
