@@ -6,6 +6,7 @@ import { fetchDataJobsDetail } from '@/data/fetchData';
 import InfiniteScroll from 'react-infinite-scroll-component';
 
 
+
 const JobOffers = () => {
 
     const [selectData, setSelectData] = useState([]);
@@ -415,9 +416,14 @@ const JobOffers = () => {
 
 
             <div className='p-3 grid md:grid-cols-3 grid-cols-1 gap-2 bg-gray-100'>
+
                 <div id="scrollableDiv" className="overflow-y-auto w-full md:col-span-2 lg:h-[79vh] h-[50vh] m-auto p-2 border rounded-lg bg-white">
-                    {initialOptionsSelect?.navigation?.totalPages && (
-                        <InfiniteScroll
+                    {!initialOptionsSelect?.navigation?.totalPages ? (
+                        <div className="w-full h-full flex justify-center items-center">
+                            <img src="/img/img.jpg" alt="" className='rounded-lg w-[100%] h-[100%]'/>
+                        </div>) :
+
+                        (<InfiniteScroll
                             dataLength={selectData.offers?.length}
                             next={fetchMoreData}
                             hasMore={hasMore}
@@ -426,6 +432,8 @@ const JobOffers = () => {
                             scrollableTarget="scrollableDiv"
                         >
                             <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-2">
+
+
                                 {selectData.offers?.map((item) => (
                                     <a href={item?.link} target="_blank" rel="noreferrer" className="w-full " key={item.id}>
                                         <div className={`max-h-full ${item.score >= 8 ? 'bg-green-50' : item.score >= 5 ? 'bg-purple-50' : item.score >= 1 ? 'bg-blue-50' : 'bg-gray-50'}
@@ -465,7 +473,7 @@ const JobOffers = () => {
                                 ))}
                             </div>
                         </InfiniteScroll>
-                    )}
+                        )}
                 </div>
 
 
