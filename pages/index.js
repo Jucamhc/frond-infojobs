@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import RecentOrders from '@/components/RecentOrders'
-import { FaGithub, FaSearch, FaChartLine, FaRobot, FaClipboardList, FaFilter, FaCheckSquare, FaEye, FaChartPie, FaExchangeAlt } from 'react-icons/fa';
+import { FaGithub, FaSearch, FaYoutube, FaRobot, FaClipboardList, FaFilter, FaCheckSquare, FaEye, FaChartPie, FaExchangeAlt } from 'react-icons/fa';
 
 
 export default function Home() {
@@ -17,7 +17,17 @@ export default function Home() {
         <div className='p-4 grid md:grid-cols-3 grid-cols-1 gap-4'>
           <div className='w-full md:col-span-2 '>
 
-            <div className='lg:col-span-3 col-span-2 bg-white flex flex-col justify-between w-full border p-4 rounded-lg'>
+            <div className='lg:col-span-3 col-span-2 bg-white flex flex-col justify-between w-full border rounded-lg'>
+              <div className='flex items-center m-2'>
+                <FaYoutube className='text-red-600 mr-2 w-24 h-24' />
+                <p className='text-xs text-center'>
+                  ¡Te invitamos a disfrutar de nuestro increíble video explicativo de 2 puntos de este desarrollo! Además, no te pierdas la oportunidad de explorar la vista de consumo de la API con filtros personalizados y muchas más opciones disponibles. Asegúrate de desplazarte hacia abajo para obtener más información sobre las demás características. ¡Esperamos que lo disfrutes!
+                </p>
+              </div>
+              <a href="https://youtu.be/Va7s3XM_gJI" target="_blank" rel="noreferrer" className='text-center hover:font-bold'>LINK DEL VIDEO</a>
+            </div>
+
+            <div className='lg:col-span-3 mt-3 col-span-2 bg-white flex flex-col justify-between w-full border p-4 rounded-lg'>
               <div className='flex items-center'>
                 <FaRobot className=' ml-5  w-14 h-14' />
                 <p className='text-2xl font-bold text-center'>
