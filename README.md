@@ -2,6 +2,11 @@
 
 La web de demo InfoJobs ha sido creada con el objetivo de conectar a profesionales y empresas en el ámbito laboral. Nuestra plataforma ofrece a los usuarios la posibilidad de buscar empleo de manera eficiente y personalizada. Mediante filtros específicos, los candidatos pueden encontrar ofertas laborales actualizadas y ajustadas a sus preferencias. Además, demo web InfoJobs utiliza un sistema de feedback personalizado que compara la hoja de vida del usuario con cada oferta disponible, brindando sugerencias y recomendaciones relevantes. Nuestro objetivo es ser una plataforma confiable y completa que facilite la búsqueda de empleo y proporcione recursos para mejorar el proceso de selección.
 
+## Proyecto desplegado el FRONT
+URL: [https://frond-infojobs.vercel.app/](https://frond-infojobs.vercel.app/)
+
+## Este Proyecto cuenta con Backed aqui encontraras el reto de informacion.
+URL: [https://github.com/Jucamhc/api-infojobs-hackathon](https://github.com/Jucamhc/api-infojobs-hackathon)
 
 ## Instalacion
 
@@ -63,4 +68,22 @@ La plataforma ha sido diseñada considerando el inicio de sesión del perfil de 
 • react-select
 • recharts
 • tailwindcss
+
+
+# Vistas Para Movil
+
+## Pagina principal
+![WhatsApp Image 2023-05-29 at 4 56 19 PM](https://github.com/Jucamhc/frond-infojobs/assets/54044345/e7a3ad8b-4885-4a16-acc4-3cd501096405)
+
+## Empleos Con las habilidades 
+![WhatsApp Image 2023-05-29 at 4 56 20 PM (1)](https://github.com/Jucamhc/frond-infojobs/assets/54044345/a41f5650-1cb5-42b5-91ac-efcfbbec771e)
+
+
+## Ofertas Aplicadas
+![WhatsApp Image 2023-05-29 at 4 56 20 PM](https://github.com/Jucamhc/frond-infojobs/assets/54044345/a800935c-8421-4fa5-bab0-925128427202)
+
+
+## Empresas que miraron mi perfil
+![WhatsApp Image 2023-05-29 at 4 56 19 PM (1)](https://github.com/Jucamhc/frond-infojobs/assets/54044345/5e315662-8270-45ec-add8-576e0a62223a)
+
 
