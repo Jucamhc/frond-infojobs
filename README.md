@@ -5,7 +5,7 @@ La web de demo InfoJobs ha sido creada con el objetivo de conectar a profesional
 ## Proyecto desplegado el FRONT
 URL: [https://frond-infojobs.vercel.app/](https://frond-infojobs.vercel.app/)
 
-## Proyecto desplegado el BACKEND
+## Este Proyecto cuenta con Backed aqui encontraras el reto de informacion.
 URL: [https://github.com/Jucamhc/api-infojobs-hackathon](https://github.com/Jucamhc/api-infojobs-hackathon)
 
 ## Instalacion
