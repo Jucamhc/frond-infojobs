@@ -39,7 +39,7 @@ const Profile = () => {
 
   const dataPieChart = async () => {
 
-    let url = `https://api-jucamhc.hop.sh/api-offers/search?page=1&categoryIds=${selectCategory}`
+    let url = `https://api-infojobs.app.site-jucamhc.lat/api-offers/search?page=1&categoryIds=${selectCategory}`
     let data = await fetch(url).then((response) => response.json());
     setInfoCount(data?.segmentation?.utagParams?.es_sch_search_results_number)
 

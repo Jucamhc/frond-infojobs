@@ -26,21 +26,21 @@ const urlApi = () => {
   const [selectCountry, setSelectcountry] = useState([]);
 
 
-  const [inputGetProvincia, setInputGetProvincia] = useState('https://api-jucamhc.hop.sh/api-offers/search?page=1&provinceIds=');
-  const [inputGetCiudad, setInputGetCiudad] = useState('https://api-jucamhc.hop.sh/api-offers/search?page=1&cityIds=');
-  const [inputGetTeletrabajo, setInputGetTeletrabajo] = useState('https://api-jucamhc.hop.sh/api-offers/search?page=1&teleworkingIds=');
-  const [inputGetCategoriaTrabajo, setInputGetCategoriaTrabajo] = useState('https://api-jucamhc.hop.sh/api-offers/search?page=1&categoryIds=');
-  const [inputGetEducationIds, setInputGetEducationIds] = useState('https://api-jucamhc.hop.sh/api-offers/search?page=1&educationIds=');
-  const [inputGetWorkdayIds, setInputGetWorkdayIds] = useState('https://api-jucamhc.hop.sh/api-offers/search?page=1&workdayIds=');
-  const [inputGetcontract, setInputGetcontract] = useState('https://api-jucamhc.hop.sh/api-offers/search?page=1&contractTypeIds=');
-  const [inputGetcountryIds, setInputGetcountryIds] = useState('https://api-jucamhc.hop.sh/api-offers/search?page=1&countryIds=');
+  const [inputGetProvincia, setInputGetProvincia] = useState('https://api-infojobs.app.site-jucamhc.lat/api-offers/search?page=1&provinceIds=');
+  const [inputGetCiudad, setInputGetCiudad] = useState('https://api-infojobs.app.site-jucamhc.lat/api-offers/search?page=1&cityIds=');
+  const [inputGetTeletrabajo, setInputGetTeletrabajo] = useState('https://api-infojobs.app.site-jucamhc.lat/api-offers/search?page=1&teleworkingIds=');
+  const [inputGetCategoriaTrabajo, setInputGetCategoriaTrabajo] = useState('https://api-infojobs.app.site-jucamhc.lat/api-offers/search?page=1&categoryIds=');
+  const [inputGetEducationIds, setInputGetEducationIds] = useState('https://api-infojobs.app.site-jucamhc.lat/api-offers/search?page=1&educationIds=');
+  const [inputGetWorkdayIds, setInputGetWorkdayIds] = useState('https://api-infojobs.app.site-jucamhc.lat/api-offers/search?page=1&workdayIds=');
+  const [inputGetcontract, setInputGetcontract] = useState('https://api-infojobs.app.site-jucamhc.lat/api-offers/search?page=1&contractTypeIds=');
+  const [inputGetcountryIds, setInputGetcountryIds] = useState('https://api-infojobs.app.site-jucamhc.lat/api-offers/search?page=1&countryIds=');
 
 
   const seProvince = async () => {
     const pro = selectProvincia.map(item => item.value);
     const provin = pro.join(",");
     let preProvincia = document.getElementById("preProvincia");
-    let inputSetProvincia = `https://api-jucamhc.hop.sh/api-offers/search?page=1&provinceIds=${provin}`;
+    let inputSetProvincia = `https://api-infojobs.app.site-jucamhc.lat/api-offers/search?page=1&provinceIds=${provin}`;
 
     setInputGetProvincia(inputSetProvincia)
 
@@ -63,7 +63,7 @@ const urlApi = () => {
     const pro = selectCity.map(item => item.value);
     const city = pro.join(",");
     let preCity = document.getElementById("preCity");
-    let inputSetCity = `https://api-jucamhc.hop.sh/api-offers/search?page=1&cityIds=${city}`;
+    let inputSetCity = `https://api-infojobs.app.site-jucamhc.lat/api-offers/search?page=1&cityIds=${city}`;
 
     setInputGetCiudad(inputSetCity)
 
@@ -85,7 +85,7 @@ const urlApi = () => {
     const pro = selectTeleworking.map(item => item.value);
     const teletrabajo = pro.join(",");
     let preTeleworking = document.getElementById("preTeleworking");
-    let inputSetTeletrabajo = `https://api-jucamhc.hop.sh/api-offers/search?page=1&teleworkingIds=${teletrabajo}`;
+    let inputSetTeletrabajo = `https://api-infojobs.app.site-jucamhc.lat/api-offers/search?page=1&teleworkingIds=${teletrabajo}`;
 
     setInputGetTeletrabajo(inputSetTeletrabajo)
 
@@ -107,7 +107,7 @@ const urlApi = () => {
     const pro = selectCategory.map(item => item.value);
     const category = pro.join(",");
     let preCategoriaTrabajo = document.getElementById("preCategoriaTrabajo");
-    let inputSetCategoriaTrabajo = `https://api-jucamhc.hop.sh/api-offers/search?page=1&categoryIds=${category}`;
+    let inputSetCategoriaTrabajo = `https://api-infojobs.app.site-jucamhc.lat/api-offers/search?page=1&categoryIds=${category}`;
 
     setInputGetCategoriaTrabajo(inputSetCategoriaTrabajo)
 
@@ -129,7 +129,7 @@ const urlApi = () => {
     const pro = selectEducation.map(item => item.value);
     const provin = pro.join(",");
     let preEducation = document.getElementById("preEducation");
-    let inputSetEducation = `https://api-jucamhc.hop.sh/api-offers/search?page=1&educationIds=${provin}`;
+    let inputSetEducation = `https://api-infojobs.app.site-jucamhc.lat/api-offers/search?page=1&educationIds=${provin}`;
 
     setInputGetEducationIds(inputSetEducation)
 
@@ -150,7 +150,7 @@ const urlApi = () => {
     const pro = selectWorkday.map(item => item.value);
     const provin = pro.join(",");
     let preWorkdayIds = document.getElementById("preWorkdayIds");
-    let inputSetWorkdayIds = `https://api-jucamhc.hop.sh/api-offers/search?page=1&workdayIds=${provin}`;
+    let inputSetWorkdayIds = `https://api-infojobs.app.site-jucamhc.lat/api-offers/search?page=1&workdayIds=${provin}`;
 
     setInputGetWorkdayIds(inputSetWorkdayIds)
 
@@ -170,7 +170,7 @@ const urlApi = () => {
     const pro = selectContractType.map(item => item.value);
     const provin = pro.join(",");
     let preContractType = document.getElementById("preContractType");
-    let inputSetContractType = `https://api-jucamhc.hop.sh/api-offers/search?page=1&contractTypeIds=${provin}`;
+    let inputSetContractType = `https://api-infojobs.app.site-jucamhc.lat/api-offers/search?page=1&contractTypeIds=${provin}`;
 
     setInputGetcontract(inputSetContractType)
 
@@ -190,7 +190,7 @@ const urlApi = () => {
     const pro = selectCountry.map(item => item.value);
     const provin = pro.join(",");
     let preCountry = document.getElementById("preCountry");
-    let inputSetCountry = `https://api-jucamhc.hop.sh/api-offers/search?page=1&countryIds=${provin}`;
+    let inputSetCountry = `https://api-infojobs.app.site-jucamhc.lat/api-offers/search?page=1&countryIds=${provin}`;
 
     setInputGetcountryIds(inputSetCountry)
 

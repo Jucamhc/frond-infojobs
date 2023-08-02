@@ -5,11 +5,11 @@ export function fetchData(type) {
 }
 
 export function fetchDataJobs(keyword) {
-    return fetch(`https://api-jucamhc.hop.sh/api-offers/search?keyword=${keyword}`)
+    return fetch(`https://api-infojobs.app.site-jucamhc.lat/api-offers/search?keyword=${keyword}`)
         .then((response) => response.json());
 }
 export async function fetchDataJobsDetail(keyword, normalizedJobTitleIds, provinceIds, cityIds, teleworkingIds, categoryIds, workdayIds, educationIds, segmentId, contractTypeIds, page, sortBy, onlyForeignCountry, countryIds, sinceDate, subcategoryIds) {
-    const url = `https://api-jucamhc.hop.sh/api-offers/search?` +
+    const url = `https://api-infojobs.app.site-jucamhc.lat/api-offers/search?` +
         `keyword=${keyword || ''}&` +
         `normalizedJobTitleIds=${normalizedJobTitleIds || ''}&` +
         `provinceIds=${provinceIds || ''}&` +
@@ -35,7 +35,7 @@ export async function fetchDataJobsDetail(keyword, normalizedJobTitleIds, provin
 
 
 export function fetchDataProfile(type) {
-    return fetch(`https://api-jucamhc.hop.sh/filtradoSkill`)
+    return fetch(`https://api-infojobs.app.site-jucamhc.lat/filtradoSkill`)
         .then((response) => response.json());
 }
 
